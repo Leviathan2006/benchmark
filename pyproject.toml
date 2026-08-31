@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rollout-error"
+version = "0.0.1"
+description = "Study of horizon-weighted rollout-loss objectives for autoregressive neural PDE emulators, benchmarked on APEBench."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+    "apebench",
+    "jax",
+    "trainax",
+    "numpy",
+    "pandas",
+    "pyarrow",
+    "matplotlib",
+    "pyyaml",
+    "pytest",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ipykernel", "nbformat"]
+
+[tool.setuptools]
+packages = ["rollout_error"]
+
+[tool.setuptools.package-dir]
+rollout_error = "src"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+xfail_strict = false

@@ -1,0 +1,12 @@
+# NULL CONTROL.
+#
+# Pure diffusion is strongly dissipative: high-frequency error is damped by the
+# dynamics itself, so an autoregressive emulator's rollout error should stay
+# essentially flat regardless of the training-loss horizon weighting. Any
+# weighting mode (uniform / discounted / normalized, any gamma) should land on
+# top of the `one` / `sup` baselines here. If it does not, the effect we see on
+# the other scenarios is an artefact, not a real mitigation.
+name: diff_diff
+# apebench.scenarios.difficulty.scenario_dict["diff_diff"]  (class: Diffusion)
+difficulty_params:
+  diffusion_gamma: 4.0

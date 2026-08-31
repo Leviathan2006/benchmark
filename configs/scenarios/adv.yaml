@@ -1,0 +1,7 @@
+# Linear advection -- transport, no dissipation. Rollout error is expected to
+# accumulate roughly linearly: a clean setting to see whether horizon weighting
+# changes the slope.
+name: diff_adv
+# apebench.scenarios.difficulty.scenario_dict["diff_adv"]  (class: Advection)
+difficulty_params:
+  advection_gamma: -4.0

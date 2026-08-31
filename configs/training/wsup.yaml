@@ -1,0 +1,18 @@
+# Horizon-WEIGHTED unrolled training -- the method under study.
+#
+#   L_w(theta) = sum_{k=1}^{K} w_k * || u_hat_{t+k} - u_{t+k} ||
+#
+# Same unrolled forward pass as "sup-XX"; only the per-step aggregation changes.
+# Implemented as a custom weighting supplied to trainax's rollout-loss reduction
+# (see src/losses.py :: rollout_weights), NOT as a new rollout loop.
+#
+# weight_mode / gamma are swept by src/sweep.py:
+#   uniform     -> w_k = 1                 (equivalence check vs sup)
+#   discounted  -> w_k = gamma ** k        gamma in {0.8, 0.9, 1.0, 1.1, 1.25}
+#   normalized  -> w_k = 1 / EMA(err_k)    gamma unused
+name: wsup
+train_config: "wsup-5"
+unroll_length: 5
+weight_mode: discounted        # swept: uniform | discounted | normalized
+gamma: 1.0                      # swept for discounted: 0.8, 0.9, 1.0, 1.1, 1.25
+ema_decay: 0.99                 # normalized mode only

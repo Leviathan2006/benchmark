@@ -1,0 +1,23 @@
+# results artefacts (keep the directory, not its contents)
+results/*.parquet
+results/*.csv
+results/*.png
+results/*.pdf
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# envs
+.venv/
+venv/
+env/
+
+# jax / os
+*.log
+.DS_Store

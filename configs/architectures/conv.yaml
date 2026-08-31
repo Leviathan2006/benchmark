@@ -1,0 +1,4 @@
+# Plain feed-forward ConvNet. APEBench network_config: Conv;W;D;act
+# W = hidden width, D = depth (number of conv layers), act = activation.
+name: conv
+network_config: "Conv;26;10;relu"

@@ -1,0 +1,9 @@
+# Unrolled ("supervised") training with UNIFORM step weighting.
+# APEBench train_config: "sup-XX" where XX is the unroll length.
+# This is the direct baseline our weighted variant (wsup) must beat:
+# wsup with weight_mode=uniform should be numerically equivalent to this.
+name: sup
+train_config: "sup-5"
+unroll_length: 5
+weight_mode: uniform
+gamma: 1.0

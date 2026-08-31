@@ -1,0 +1,8 @@
+# Kuramoto-Sivashinsky -- spatiotemporal chaos. Trajectories decorrelate in
+# finite time no matter how good the emulator, so the target metric is
+# correlation time (at 0.8 / 0.9), not long-horizon nRMSE. The primary scenario
+# for the rollout-error question.
+name: diff_ks
+# apebench.scenarios.difficulty.scenario_dict["diff_ks"]  (class: KuramotoSivashinsky)
+difficulty_params:
+  ks_gamma: -6.0

@@ -1,0 +1,8 @@
+# Single-channel Burgers -- nonlinear advection with viscous regularisation.
+# Shock formation makes short-horizon errors compound quickly; a good stress test
+# for whether up- or down-weighting far horizons helps.
+name: diff_burgers_sc
+# apebench.scenarios.difficulty.scenario_dict["diff_burgers_sc"]  (class: BurgersSingleChannel)
+difficulty_params:
+  burgers_gamma: -3.0
+  burgers_delta: 2.5

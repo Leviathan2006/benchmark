@@ -1,0 +1,6 @@
+# One-step supervised training (no unrolling). APEBench train_config: "one".
+# Baseline: rollout stability comes only from the model, never from the loss.
+name: one
+train_config: "one"
+weight_mode: uniform
+gamma: 1.0

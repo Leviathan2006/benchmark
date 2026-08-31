@@ -1,0 +1,4 @@
+# U-Net. APEBench network_config: UNet;W;L;act
+# W = base width, L = number of down/up levels, act = activation.
+name: unet
+network_config: "UNet;12;2;relu"

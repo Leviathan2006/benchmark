@@ -1,0 +1,10 @@
+# Diverted-chain unrolled training. APEBench train_config: "div-XX"
+# (optionally ";cut_div_chain=true"). Included as a second, stronger APEBench
+# baseline -- diverted-chain already addresses rollout error a different way, so
+# it bounds how much headroom horizon weighting can claim.
+name: div
+train_config: "div-5"
+unroll_length: 5
+cut_div_chain: false
+weight_mode: uniform
+gamma: 1.0

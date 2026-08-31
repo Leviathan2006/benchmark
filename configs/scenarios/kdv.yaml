@@ -1,0 +1,8 @@
+# Korteweg-de Vries -- dispersive, soliton dynamics, energy-conserving. Phase
+# errors accumulate without amplitude blow-up, so correlation time is the more
+# informative metric here than nRMSE.
+name: diff_kdv
+# apebench.scenarios.difficulty.scenario_dict["diff_kdv"]  (class: KortewegDeVries)
+difficulty_params:
+  kdv_gamma: -8.0
+  kdv_delta: -10.0

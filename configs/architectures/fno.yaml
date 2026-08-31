@@ -1,0 +1,5 @@
+# Fourier Neural Operator. APEBench network_config: FNO;modes;W;B;act
+# modes = retained Fourier modes, W = channel width, B = number of FNO blocks,
+# act = activation.
+name: fno
+network_config: "FNO;12;30;4;gelu"

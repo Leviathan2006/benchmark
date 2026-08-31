@@ -1,0 +1,22 @@
+# APEBench base-scenario defaults. These mirror the library defaults so a run is
+# reproducible without depending on APEBench's internal default drift.
+#
+# report_metrics = mean_nRMSE in APEBench is a GEOMETRIC mean over rollout steps.
+# See src/metrics.py -- we always compute geometric AND arithmetic separately and
+# never fold the loss-side horizon weighting into this.
+
+num_spatial_dims: 1
+num_points: 160
+
+num_train_samples: 50
+train_temporal_horizon: 50
+
+num_test_samples: 30
+test_temporal_horizon: 200
+
+batch_size: 20
+report_metrics: mean_nRMSE
+
+# experiment-wide
+num_seeds: 5
+task_config: predict
